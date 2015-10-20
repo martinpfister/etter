@@ -4,4 +4,5 @@
 /Resources/Private/TypoScript/constants-local.ts
 /Resources/Private/TypoScript/setup-local.ts
 /Resources/Public/Template/.tmp
-/Resources/Public/Template/app/bower_components
+/Resources/Public/Template/bower_components
+/Resources/Public/Template/app/styles/bower_components

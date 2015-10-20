@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'variables';
 @import 'grid';
+@import 'typo3';
 @import 'layout';
 @import 'sections';
 @import 'navigation';
@@ -15,6 +16,9 @@ body {
   font-family: 'Titillium Web', sans-serif;
   color: $darkgrey;
 }
+
+
+
 html, body {
   height: 100%;
 }

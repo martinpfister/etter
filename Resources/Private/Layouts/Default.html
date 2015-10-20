@@ -1,15 +1,50 @@
-<f:cObject typoscriptObjectPath="lib.skiplinks" />
+<div id="cd-intro" class="cd-fixed-bg cd-bg-1">
+    <div id="logo">
+        <img src="typo3conf/ext/etter/Resources/Public/Template/dist/images/logo.png" alt="Etter Baumanagement">
+    </div>
+    <div id="foward">
+        <a href="#motto">
+            <img src="typo3conf/ext/etter/Resources/Public/Template/dist/images/icons/arrow_down_head.png" alt="about">
+        </a>
+    </div>
+</div>
+
 <div class="row">
     <f:render partial="Header" arguments="{_all}" />
 </div>
-<div class="row">
-    <f:cObject typoscriptObjectPath="lib.pagetitle" />
-</div>
-<div class="row">
-    <!-- TYPO3SEARCH_begin -->
+
+<main class="cd-main-content cd-scrolling-bg row">
     <f:render section="Content" arguments="{_all}" />
+    <!-- TYPO3SEARCH_begin -->
+    <section id="motto" class="cd-containercd-section is-first lightblue">
+        <header class="cd-container">
+            <hgroup class="white">
+                <h1>Motto Etter</h1>
+                <h2>Motto Baumanagment</h2>
+            </hgroup>
+        </header>
+        <div class="cd-container center-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab  nihil quibusdam omnis suscipit qui eos autem est laborum ducimus! Tenetur?
+            </p>
+        </div>
+
+    </section>
+    <section id="referenzen" class="cd-section cd-container">
+        <header class="cd-container">
+            <hgroup>
+                <h1>Referenzen</h1>
+            </hgroup>
+        </header>
+        <div class="cd-container center-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates, laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat omnis quia maiores, et. Aut facilis ducimus, labore culpa, nemo eum qui quae, rem libero aspernatur, inventore quos modi a ex sit. Nulla iure odio at quo corporis assumenda ea fugiat adipisci aspernatur incidunt sapiente consequatur, ullam cumque dolorem facilis laboriosam a dolore similique velit esse. Eveniet omnis voluptas, nobis dicta cupiditate odit, similique mollitia eos dignissimos provident voluptatem adipisci ullam facilis alias! Reprehenderit voluptatem provident ut veniam aliquid, labore culpa.
+            </p>
+        </div>
+    </section>
     <!-- TYPO3SEARCH_end -->
-</div>
+</main>
+
 <footer class="row">
     <f:render partial="Footer" arguments="{_all}" />
 </footer>

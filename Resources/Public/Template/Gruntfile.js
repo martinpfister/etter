@@ -367,7 +367,6 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'postcss',
       'browserSync:livereload',
       'watch'
     ]);
@@ -382,8 +381,7 @@ module.exports = function (grunt) {
     if (target !== 'watch') {
       grunt.task.run([
         'clean:server',
-        'concurrent:test',
-        'postcss'
+        'concurrent:test'
       ]);
     }
 
@@ -396,13 +394,11 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    'postcss',
     'concat',
     'cssmin',
     'uglify',
     'copy:dist',
     'modernizr',
-    'filerev',
     'usemin',
     'htmlmin'
   ]);

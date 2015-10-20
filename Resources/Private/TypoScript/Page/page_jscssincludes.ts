@@ -1,59 +1,53 @@
 page {
-    # CSS files to be included
     includeCSS {
-
-        normalizer = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/css/lib/normalize.css
-        normalizer.media = screen,print
-        mainCSS = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/css/app.css
+        #normalizer = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/css/lib/normalize.css
+        #normalizer.media = screen,print
+        mainCSS = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/styles/main.css
         mainCSS.media = screen,print
-        fancybox = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox.css
-        fancyboxThumbnailHelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-thumbs.css
+        #fancybox = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox.css
+        #fancyboxThumbnailHelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-thumbs.css
     }
 
-
-    # JS libs header
     includeJSlibs {
-        modernizr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/modernizr/modernizr.js
+        modernizr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor/modernizr.js
     }
 
-
-    # JS libs footer
     includeJSFooterlibs {
-        jQuery = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery-1.11.1.min.js
-        jQueryCookie = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.cookie.js
-        jQueryCookie = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.cookie.js
-        jQueryDoubleTapMenu = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.doubleTapMenu.js
-        jQueryToggler = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.toggler.js
+        #jQuery = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery-1.11.1.min.js
+        #jQueryCookie = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.cookie.js
+        #jQueryCookie = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.cookie.js
+        #jQueryDoubleTapMenu = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.doubleTapMenu.js
+        #jQueryToggler = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.toggler.js
 
         # Move/swipe events (swipe depends on move!)
-        jQueryMove = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.event.move.js
-        jQuerySwipe = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.event.swipe.js
-        jQueryPlaceholder = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.placeholder.js
-        jQueryFancybox = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox_patched.js
-        jQueryFancyboxMediahelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-media.js
-        jQueryFancyboxThumbnailHelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-thumbs.js
+        #jQueryMove = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.event.move.js
+        #jQuerySwipe = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.event.swipe.js
+        #jQueryPlaceholder = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/jquery.placeholder.js
+        #jQueryFancybox = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox_patched.js
+        #jQueryFancyboxMediahelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-media.js
+        #jQueryFancyboxThumbnailHelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-thumbs.js
 
-        foundation = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.js
-        foundationTopbar = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.topbar.js
-        foundationClearing = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.clearing.js
-        foundationAlert = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.alert.js
-        foundationReveal = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.reveal.js
-        foundationOffcanvas = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.offcanvas.js
-        foundationTabs = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.tab.js
-        foundationAccordion = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.accordion.js
+        #foundation = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.js
+        #foundationTopbar = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.topbar.js
+        #foundationClearing = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.clearing.js
+        #foundationAlert = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.alert.js
+        #foundationReveal = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.reveal.js
+        #foundationOffcanvas = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.offcanvas.js
+        #foundationTabs = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.tab.js
+        #foundationAccordion = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/foundation/foundation.accordion.js
 
-        slickslider = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/slick/slick.js
+        #slickslider = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/slick/slick.js
 
         # Click delay removal for mobile browsers
         fastclick = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/fastclick/fastclick.js
 
-    } #includeJSFooterlibs
+    }
 
 
     # JS footer
     includeJSFooter {
-        # Main application js
-        mainJS = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/app.js
+        venodr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor.js
+        main   = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/main.js
     }
 
 

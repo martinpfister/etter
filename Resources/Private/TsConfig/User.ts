@@ -33,8 +33,8 @@ options {
 #  FE admin panel
 #-------------------------------------------------------------------------------
 admPanel {
-    enable.preview = 1
-    enable.edit = 1
-    enable.info = 1
+    enable.preview = 0
+    enable.edit = 0
+    enable.info = 0
 }
 

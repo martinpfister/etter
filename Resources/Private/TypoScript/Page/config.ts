@@ -5,12 +5,13 @@ config {
     disablePrefixComment = 1
     meaningfulTempFilePrefix = 100
     noPageTitle = 2
-
+    removeDefaultCss = 1
+    admPanel = 0
     index_enable = 1
     index_externals = 1
 
     # remove inline CSS/JS to external
-    removeDefaultJS = external
+    removeDefaultJS = 1
     inlineStyle2TempFile = 1
     compressJs = {$site.compressAndMergeAssets}
     compressCss = {$site.compressAndMergeAssets}
