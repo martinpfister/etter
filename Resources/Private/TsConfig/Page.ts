@@ -13,7 +13,7 @@ TCEFORM.pages {
     keywords.disabled = 1
 
     # Categories
-    categories.disabled = 0
+    categories.disabled = 1
 
     # Page type "backend user section" (remove)
     doktype.removeItems = 6
@@ -57,11 +57,11 @@ TCEFORM.tt_content {
     date.disabled = 1
 
     # Categories
-    categories.disabled = 0
+    categories.disabled = 1
 
     # Only allow headers 2, 3, and 4
     header_layout {
-        keepItems = 2,3,4
+        keepItems = 2,3,4, 100
         altLabels {
             1 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.header_layout.1
             2 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.header_layout.2
