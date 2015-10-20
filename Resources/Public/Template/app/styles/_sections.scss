@@ -1,0 +1,56 @@
+#motto {
+  background: $lightblue;
+}
+.bg-1 {
+  background-image: url(../images/background/hintergrund1.jpg);
+}
+
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  line-height: 1.6;
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: #3d3536;
+  color: #a6989a;
+}
+.cd-scrolling-bg.lightblue {
+  background-color: $lightblue;
+  color: $darkgrey;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: #b4d7a8;
+  color: #3d3536;
+}
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url(../images/temp_header_images.png);
+}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}

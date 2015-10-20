@@ -1,0 +1,81 @@
+@import 'reset';
+@import 'variables';
+@import 'grid';
+@import 'layout';
+@import 'sections';
+@import 'navigation';
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,200italic,300italic,600);
+
+/* --------------------------------
+Primary style
+-------------------------------- */
+body {
+  font-size: 100%;
+  font-family: 'Titillium Web', sans-serif;
+  color: $darkgrey;
+}
+html, body {
+  height: 100%;
+}
+main {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+a {
+  color: #f5484a;
+  text-decoration: none;
+}
+p {
+font-weight: 600;
+  line-height: 1.4;
+}
+img {
+  max-width: 100%;
+}
+header {
+  padding-bottom: 24px;
+}
+hgroup {
+  padding: 100px 0 20px;
+  text-transform: uppercase;
+  font-size: 4.2rem;
+  text-align: center;
+  line-height: 1;
+  font-weight: 200;
+  background: url("../images/icons/h1_border_bottom.png") no-repeat bottom center;
+  &.white {
+    color: $white;
+  }
+}
+.has-top-margin {
+  padding: 70px 0 0;
+}
+section {
+  padding: 0px 0 110px;
+  z-index: 2;
+}
+
+
+
+/* --------------------------------
+Modules - reusable parts of our design
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.cd-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.center-text {
+  text-align: center;
+}
+.button {
+
+}
