@@ -53,7 +53,9 @@
             <trans-unit id="backend_layout.rightColumn" xml:space="preserve">
                 <source>Right</source>
             </trans-unit>
-
+            <trans-unit id="backend_layout.navigation" xml:space="preserve">
+                <source>Navigation</source>
+            </trans-unit>
 
             <!-- FRONTEND LAYOUT NAMES -->
             <trans-unit id="frontend_layout.examplelayout" xml:space="preserve">

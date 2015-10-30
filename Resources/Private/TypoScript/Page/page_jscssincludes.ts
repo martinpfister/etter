@@ -2,7 +2,7 @@ page {
     includeCSS {
         #normalizer = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/css/lib/normalize.css
         #normalizer.media = screen,print
-        mainCSS = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/styles/main.css
+        mainCSS = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/tmp/styles/main.css
         mainCSS.media = screen,print
         #fancybox = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox.css
         #fancyboxThumbnailHelper = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/fancybox/jquery.fancybox-thumbs.css

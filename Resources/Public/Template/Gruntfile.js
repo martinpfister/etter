@@ -32,10 +32,6 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['babel:dist']
@@ -69,13 +65,13 @@ module.exports = function (grunt) {
         options: {
           files: [
             '<%= config.app %>/{,*/}*.html',
-            '.tmp/styles/{,*/}*.css',
+            'tmp/styles/{,*/}*.css',
             '<%= config.app %>/images/{,*/}*',
-            '.tmp/scripts/{,*/}*.js'
+            'tmp/scripts/{,*/}*.js'
           ],
           port: 9000,
           server: {
-            baseDir: ['.tmp', config.app],
+            baseDir: ['tmp', config.app],
             routes: {
               '/bower_components': './bower_components'
             }
@@ -89,7 +85,7 @@ module.exports = function (grunt) {
           logLevel: 'silent',
           host: 'localhost',
           server: {
-            baseDir: ['.tmp', './test', config.app],
+            baseDir: ['tmp', './test', config.app],
             routes: {
               '/bower_components': './bower_components'
             }
@@ -110,13 +106,13 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            '.tmp',
+            'tmp',
             '<%= config.dist %>/*',
             '!<%= config.dist %>/.git*'
           ]
         }]
       },
-      server: '.tmp'
+      server: 'tmp'
     },
 
     // Compiles ES6 with Babel
@@ -129,7 +125,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/scripts',
           src: '{,*/}*.js',
-          dest: '.tmp/scripts',
+          dest: 'tmp/scripts',
           ext: '.js'
         }]
       },
@@ -138,7 +134,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'test/spec',
           src: '{,*/}*.js',
-          dest: '.tmp/spec',
+          dest: 'tmp/spec',
           ext: '.js'
         }]
       }
@@ -157,7 +153,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/styles',
           src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
+          dest: 'tmp/styles',
           ext: '.css'
         }]
       }
@@ -176,9 +172,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
+          cwd: 'tmp/styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: 'tmp/styles/'
         }]
       }
     },
@@ -272,7 +268,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= config.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
+            'tmp/styles/{,*/}*.css',
             '<%= config.app %>/styles/{,*/}*.css'
           ]
         }

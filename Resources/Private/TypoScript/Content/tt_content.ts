@@ -1,6 +1,9 @@
 # **********************************************************
 # Content element rendering
 # **********************************************************
+
+lib.stdheader.stdWrap.dataWrap = <header class="csc-header csc-header-n{cObj:parentRecordNumber}">|</header>
+
 tt_content {
 
     # **********************************************************
@@ -140,12 +143,18 @@ tt_content {
     # **********************************************************
     # COA for content element classes
     # based on section_frame and responsive display classes
+    # Change <div id="c#"> in <section id="c#">
+    stdWrap.innerWrap.cObject.default{
+        10.cObject.default.value=<section id="c{field:uid}"
+        30.cObject.default.value=>|</section>
+    }
+
     stdWrap.innerWrap.cObject.default.20.10 >
     stdWrap.innerWrap.cObject.default.20.10 = COA
     stdWrap.innerWrap.cObject.default.20.10 {
         # Default content element class
         5 = TEXT
-        5.value = element
+        5.value = element cd-container cd-section
         5.noTrimWrap = || |
 
         10 = TEXT

@@ -2,7 +2,7 @@
   background: $lightblue;
 }
 .bg-1 {
-  background-image: url(../images/background/hintergrund1.jpg);
+  background-image: url(../../dist/images/background/hintergrund1.jpg);
 }
 
 
@@ -42,7 +42,7 @@
   z-index: 1;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url(../images/temp_header_images.png);
+  background-image: url(../../dist/images/temp_header_images.png);
 }
 @media only screen and (min-width: 768px) {}
 @media only screen and (min-width: 1170px) {

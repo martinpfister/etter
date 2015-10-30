@@ -1,4 +1,4 @@
-<div class="cd-secondary-nav">
+<div class="cd-secondary-nav" style="display: none;">
     <a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
     <a href="#motto" id="home" class="is-hidden"><img src="typo3conf/ext/etter/Resources/Public/Template/dist/images/icon-home.png" alt="Etter Baumanagement"></a>
     <nav>
@@ -18,8 +18,9 @@
             </li>
         </ul>
     </nav>
+    <f:cObject typoscriptObjectPath="lib.menu" />
 </div>
 
-<f:cObject typoscriptObjectPath="lib.menu" />
+
 
 <h1>{pagetitle}</h1>

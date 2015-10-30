@@ -1,6 +1,6 @@
 <div id="cd-intro" class="cd-fixed-bg cd-bg-1">
     <div id="logo">
-        <img src="typo3conf/ext/etter/Resources/Public/Template/dist/images/logo.png" alt="Etter Baumanagement">
+        <img src="typo3conf/ext/etter/Resources/Public/Template/dist/images//Logo_Gross_verkleinert.png" alt="Etter Baumanagement">
     </div>
     <div id="foward">
         <a href="#motto">
@@ -9,16 +9,9 @@
     </div>
 </div>
 
-<div class="row">
-    <f:render partial="Header" arguments="{_all}" />
-</div>
 
-<main class="cd-main-content cd-scrolling-bg row">
-    <!-- TYPO3SEARCH_begin -->
-    <f:render section="Content" arguments="{_all}" />
-    <f:render partial="Beispiel" />
-    <!-- TYPO3SEARCH_end -->
-</main>
+<f:render section="Content" arguments="{_all}" />
+
 
 <footer class="row">
     <f:render partial="Footer" arguments="{_all}" />

@@ -1,8 +1,24 @@
+function updateSecondaryNavigation() {
+    var contentSections = $('.cd-section'),
+        secondaryNav    = $('.cd-secondary-nav');
+
+    contentSections.each(function() {
+        var actual = $(this),
+            actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
+            actualAnchor = secondaryNav.find('a[href="#' + actual.attr('id') + '"]');
+        if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) && (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
+            actualAnchor.addClass('active');
+        } else {
+            actualAnchor.removeClass('active');
+        }
+    });
+}
+
 jQuery(document).ready(function($) {
     var secondaryNav            = $('.cd-secondary-nav'),
         secondaryNavTopPosition = secondaryNav.offset().top,
         taglineOffesetTop       = $('#cd-intro').height() + parseInt($('#logo').css('paddingTop').replace('px', '')),
-        contentSections         = $('.cd-section'),
+        mainArrowDown           = $('#foward'),
         logo                    = $('#home');
 
     $(window).on('scroll', function() {
@@ -32,19 +48,6 @@ jQuery(document).ready(function($) {
         updateSecondaryNavigation();
     });
 
-    function updateSecondaryNavigation() {
-        contentSections.each(function() {
-            var actual = $(this),
-                actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
-                actualAnchor = secondaryNav.find('a[href="#' + actual.attr('id') + '"]');
-            if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) && (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
-                actualAnchor.addClass('active');
-            } else {
-                actualAnchor.removeClass('active');
-            }
-        });
-    }
-
     //on mobile - open/close secondary navigation clicking/tapping the .cd-secondary-nav-trigger
     $('.cd-secondary-nav-trigger').on('click', function(event) {
         event.preventDefault();
@@ -64,17 +67,16 @@ jQuery(document).ready(function($) {
         secondaryNav.find('ul').removeClass('is-visible');
     });
 
-    $('#foward').on('click', function(event) {
+    mainArrowDown.on('click', function(event) {
         event.preventDefault();
         $('body,html').animate({
-            'scrollTop': $('#motto').offset().top
+            'scrollTop': $('main').offset().top
         }, 700);
     });
 
-    $('#home').on('click', function(event) {
+    logo.on('click', function(event) {
         event.preventDefault();
-        var height = $('#motto').offset().top - 70 + 1;
-        console.log(height);
+        var height = $('main').offset().top;
         $('body,html').animate({
             'scrollTop':height
         }, 700);

@@ -5,7 +5,7 @@ lib.logo = COA
 lib.logo {
     10 = IMAGE
     10 {
-        file = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/images/logo.png
+        file = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/images/Logo_Gross_verkleinert.png
         altText = {LLL:EXT:{$plugin.templatebootstrap.packageKey}/Resources/Private/Language/locallang.xlf:logo} {$company.name}
         altText.insertData = 1
         stdWrap.typolink {

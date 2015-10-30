@@ -1,8 +1,18 @@
 backend_layout {
     colCount = 1
-    rowCount = 1
+    rowCount = 2
     rows {
         1 {
+            columns {
+                1 {
+                    name = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:backend_layout.navigation
+                    colPos = 1
+                    colspan = 1
+                    #allowed = text,textpic
+                }
+            }
+        }
+        2 {
             columns {
                 1 {
                     name = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:backend_layout.mainColumn

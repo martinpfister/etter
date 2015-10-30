@@ -113,8 +113,6 @@
   }
 }
 
-
-
 .cd-secondary-nav-trigger {
   position: fixed;
   bottom: 20px;
@@ -123,11 +121,11 @@
   height: 44px;
   background: rgba(3, 13, 24, 0.96);
   border-radius: 0.25em;
+  z-index: 4;
   /* image replacement */
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  z-index: 2;
 }
 .cd-secondary-nav-trigger span {
   /* the span element is used to create the menu icon */
