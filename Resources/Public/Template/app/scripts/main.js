@@ -1,12 +1,18 @@
 function updateSecondaryNavigation() {
     var contentSections = $('.cd-section'),
         secondaryNav    = $('.cd-secondary-nav');
-
+    console.log('up');
     contentSections.each(function() {
         var actual = $(this),
             actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
             actualAnchor = secondaryNav.find('a[href="#' + actual.attr('id') + '"]');
-        if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) && (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
+
+        console.log(actualAnchor);
+        console.log(actualHeight);
+        console.log(actual);
+
+        if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) &&
+            (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
             actualAnchor.addClass('active');
         } else {
             actualAnchor.removeClass('active');
@@ -31,13 +37,13 @@ jQuery(document).ready(function($) {
             //fix secondary navigation
             secondaryNav.addClass('is-fixed');
             //push the .cd-main-content giving it a top-margin
-            $('.cd-main-content').addClass('has-top-margin');
+            $('#c1').addClass('has-top-margin');
             setTimeout(function() {
                 logo.addClass('slide-in');
             }, 50);
         } else {
             secondaryNav.removeClass('is-fixed');
-            $('.cd-main-content').removeClass('has-top-margin');
+            $('#c1').removeClass('has-top-margin');
             setTimeout(function() {
                 secondaryNav.removeClass('animate-children');
                 logo.removeClass('slide-in');
@@ -45,8 +51,10 @@ jQuery(document).ready(function($) {
         }
 
         //on desktop - update the active link in the secondary fixed navigation
-        updateSecondaryNavigation();
+        //updateSecondaryNavigation();
     });
+
+    //remove first
 
     //on mobile - open/close secondary navigation clicking/tapping the .cd-secondary-nav-trigger
     $('.cd-secondary-nav-trigger').on('click', function(event) {
@@ -70,15 +78,21 @@ jQuery(document).ready(function($) {
     mainArrowDown.on('click', function(event) {
         event.preventDefault();
         $('body,html').animate({
-            'scrollTop': $('main').offset().top
+            'scrollTop': $('.cd-secondary-nav').offset().top
         }, 700);
     });
 
     logo.on('click', function(event) {
         event.preventDefault();
-        var height = $('main').offset().top;
         $('body,html').animate({
-            'scrollTop':height
+            'scrollTop': $('main').offset().top
+        }, 700);
+    });
+
+    $('a.internal-link').on('click', function(event) {
+        event.preventDefault();
+        $('body,html').animate({
+            'scrollTop': $($(this).attr('href')).offset().top
         }, 700);
     });
 

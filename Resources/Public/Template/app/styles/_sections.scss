@@ -1,9 +1,101 @@
-#motto {
-  background: $lightblue;
+/* --------------------------------
+Style
+-------------------------------- */
+main .cd-section {
+  padding: 85px 0 75px;
+  z-index: 2;
+
+  &.has-top-margin {
+    padding-top: 155px;
+  }
+
+  h1 {
+    color: $darkblue;
+    text-transform: uppercase;
+    font-size: 4.3rem;
+    line-height: 1;
+    text-align: center;
+    font-weight: 100;
+    padding-bottom: 20px;
+    background: url(../../dist/images/icons/h1_border_bottom.png) no-repeat center bottom;
+  }
+  .bodytext {
+    text-align: center;
+  }
 }
-.bg-1 {
+
+/* --------------------------------
+Hellblau
+-------------------------------- */
+.cd-section.layout-1 {
+  background: #0099CC;
+  h1 {
+    color: $white;
+  }
+}
+/* --------------------------------
+Dunkelblau
+-------------------------------- */
+.cd-section.layout-2 {
+  background: $darkblue;
+  h1 {
+    color: $white;
+  }
+}
+/* --------------------------------
+Braun
+-------------------------------- */
+.cd-section.layout-3 {
   background-image: url(../../dist/images/background/hintergrund1.jpg);
+  h1 {
+    color: $white;
+  }
 }
+
+/* --------------------------------
+Logo Pattern
+-------------------------------- */
+.cd-section.layout-5 {
+  background: $white;
+}
+
+/* --------------------------------
+Referenzen
+-------------------------------- */
+.tx-mp-referenzen {
+  overflow: hidden;
+  padding-top: 25px;
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  figure {
+    padding: 1px;
+  }
+
+  figcaption {
+    text-align: left;
+    padding: 0.5em;
+  }
+
+  @media (min-width: 36em) {
+    figure {
+      display: block;
+      float: left;
+      width: 33.3333333333333%;
+    }
+  }
+  /*
+  @media (max-width: 35.9999em) {
+    figure { display: table-row; }
+    figure img { display: table-cell; width: 6em; height: 6em; margin: 1em; margin-top: 2em; vertical-align: top; }
+    figcaption { display: table-cell; vertical-align: top; padding-top: 2em; }
+  }
+  */
+}
+
+
 
 
 .cd-scrolling-bg {

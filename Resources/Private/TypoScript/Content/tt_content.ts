@@ -2,7 +2,7 @@
 # Content element rendering
 # **********************************************************
 
-lib.stdheader.stdWrap.dataWrap = <header class="csc-header csc-header-n{cObj:parentRecordNumber}">|</header>
+lib.stdheader.stdWrap.dataWrap = <header class="csc-header cd-container csc-header-n{cObj:parentRecordNumber}">|</header>
 
 tt_content {
 
@@ -139,12 +139,38 @@ tt_content {
         }
     }
 
+    #text.20.wrap = <div class="cd-container">|</div>
+    text.20.wrap = <div class="cd-container">|</div>
+    textpic.20.wrap = <div class="cd-container">|</div>
+
+    #textpic.20 {
+    #    text {
+    #        10.stdWrap.dataWrap = <header class="csc-textpicHeader cd-container csc-textpicHeader-{field:imageorient}">|</header>
+    #        20.wrap = <div class="cd-container csc-textpic-text">|</div>
+    #    }
+    #}
+    image.20.wrap = <div class="cd-container">|</div>
+    bullets.20.wrap = <div class="cd-container">|</div>
+    table.20.wrap = <div class="cd-container">|</div>
+    uploads.20.wrap = <div class="cd-container">|</div>
+    multimedia.20.wrap = <div class="cd-container">|</div>
+    mailform.20.wrap = <div class="cd-container">|</div>
+    search.20.wrap = <div class="cd-container">|</div>
+    login.20.wrap = <div class="cd-container">|</div>
+    splash.stdWrap.20.wrap = <div class="cd-container">|</div>
+    menu.stdWrap.20.wrap = <div class="cd-container">|</div>
+    shortcut.20.wrap = <div class="cd-container">|</div>
+    list.20.wrap = <div class="cd-container">|</div>
+    script.20.wrap = <div class="cd-container">|</div>
+    div.20.wrap = <div class="cd-container">|</div>
+    html.20.wrap = <div class="cd-container">|</div>
+    default.20.wrap = <div class="cd-container">|</div>
 
     # **********************************************************
     # COA for content element classes
     # based on section_frame and responsive display classes
     # Change <div id="c#"> in <section id="c#">
-    stdWrap.innerWrap.cObject.default{
+    stdWrap.innerWrap.cObject.default {
         10.cObject.default.value=<section id="c{field:uid}"
         30.cObject.default.value=>|</section>
     }
@@ -154,7 +180,7 @@ tt_content {
     stdWrap.innerWrap.cObject.default.20.10 {
         # Default content element class
         5 = TEXT
-        5.value = element cd-container cd-section
+        5.value = element cd-section
         5.noTrimWrap = || |
 
         10 = TEXT

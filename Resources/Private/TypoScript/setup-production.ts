@@ -46,7 +46,7 @@
 # Grid elements render config
 # **********************************************************
 <INCLUDE_TYPOSCRIPT: source="FILE:./GridElements/Slider.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:./GridElements/ThreeColumns.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./GridElements/TwoColumns.ts">
 
 
 

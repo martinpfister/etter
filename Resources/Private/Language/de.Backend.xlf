@@ -56,17 +56,48 @@
             <target state="translated">Rechts</target>
         </trans-unit>
 
-
         <!-- FRONTEND LAYOUT NAMES -->
-        <trans-unit id="frontend_layout.examplelayout" xml:space="preserve" approved="yes">
-            <source>Custom FE layout example</source>
-            <target state="translated">Benutzerdefiniertes FE-Layout (Beispiel)</target>
+        <trans-unit id="frontend_layout.lightblue" xml:space="preserve" approved="yes">
+            <source>Hellblau</source>
+        <target state="translated">Hellblau</target>
+        </trans-unit>
+        <trans-unit id="frontend_layout.darkblue" xml:space="preserve" approved="yes">
+            <source>Dunkelblau</source>
+        <target state="translated">Dunkelblau</target>
+        </trans-unit>
+        <trans-unit id="frontend_layout.brown" xml:space="preserve" approved="yes">
+        <source>Braun</source>
+        <target state="translated">Braun</target>
+        </trans-unit>
+        <trans-unit id="frontend_layout.logopattern" xml:space="preserve" approved="yes">
+            <source>Muster (Logo)</source>
+        <target state="translated">Muster (Logo)</target>
+        </trans-unit>
+        <trans-unit id="frontend_layout.referenzen" xml:space="preserve" approved="yes">
+            <source>Referenzen</source>
+            <target state="translated">Referenzen</target>
         </trans-unit>
 
         <!-- CONTENT ELEMENT LAYOUTS -->
-        <trans-unit id="tt_content.layout.examplelayout" xml:space="preserve" approved="yes">
-            <source>Custom content element layout example</source>
-            <target state="translated">Benutzerdefiniertes Inhaltselement-Layout (Beispiel)</target>
+        <trans-unit id="tt_content.layout.lightblue" xml:space="preserve" approved="yes">
+            <source>Hellblau</source>
+        <target state="translated">Hellblau</target>
+        </trans-unit>
+        <trans-unit id="tt_content.layout.darkblue" xml:space="preserve" approved="yes">
+            <source>Dunkelblau</source>
+        <target state="translated">Dunkelblau</target>
+        </trans-unit>
+        <trans-unit id="tt_content.layout.brown" xml:space="preserve" approved="yes">
+        <source>Braun</source>
+        <target state="translated">Braun</target>
+        </trans-unit>
+        <trans-unit id="tt_content.layout.logopattern" xml:space="preserve" approved="yes">
+            <source>Muster (Logo)</source>
+        <target state="translated">Muster (Logo)</target>
+        </trans-unit>
+        <trans-unit id="tt_content.layout.referenzen" xml:space="preserve" approved="yes">
+            <source>Referenzen</source>
+            <target state="translated">Referenzen</target>
         </trans-unit>
 
 

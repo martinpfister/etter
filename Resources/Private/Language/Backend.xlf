@@ -58,17 +58,38 @@
             </trans-unit>
 
             <!-- FRONTEND LAYOUT NAMES -->
-            <trans-unit id="frontend_layout.examplelayout" xml:space="preserve">
-                <source>Custom FE layout example</source>
+            <trans-unit id="frontend_layout.lightblue" xml:space="preserve">
+                <source>Hellblau</source>
             </trans-unit>
-
-
+            <trans-unit id="frontend_layout.darkblue" xml:space="preserve">
+                <source>Dunkelblau</source>
+            </trans-unit>
+            <trans-unit id="frontend_layout.brown" xml:space="preserve">
+                <source>Braun</source>
+            </trans-unit>
+            <trans-unit id="frontend_layout.logopattern" xml:space="preserve">
+                <source>Muster (Logo)</source>
+            </trans-unit>
+            <trans-unit id="frontend_layout.referenzen" xml:space="preserve">
+                <source>Referenzen</source>
+            </trans-unit>
 
             <!-- CONTENT ELEMENT LAYOUTS -->
-            <trans-unit id="tt_content.layout.examplelayout" xml:space="preserve">
-                <source>Custom content element layout example</source>
+            <trans-unit id="tt_content.layout.lightblue" xml:space="preserve">
+                <source>Hellblau</source>
             </trans-unit>
-
+            <trans-unit id="tt_content.layout.darkblue" xml:space="preserve">
+                <source>Dunkelblau</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.brown" xml:space="preserve">
+            <source>Braun</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.logopattern" xml:space="preserve">
+                <source>Muster (Logo)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.referenzen" xml:space="preserve">
+                <source>Referenzen</source>
+            </trans-unit>
 
             <!-- CONTENT ELEMENT FRAMES AND NAMES -->
             <trans-unit id="tt_content.section_frames" xml:space="preserve">

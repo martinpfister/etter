@@ -5,42 +5,102 @@ Start
   position: relative;
   height: 100%;
   min-height: 100%;
-
   background-size: cover;
   z-index: 2;
 }
-#foward {
-  bottom: 50px;
-  left: 50%;
-  margin-left: -32px;
-  z-index: 20;
-  position: absolute;
-  a {
-
-  }
-}
-/* --------------------------------
-Logo
--------------------------------- */
 #logo {
   width: 250px;
   margin: 0 auto;
   text-align: center;
   padding-top: 250px;
+  img {
+    display: block;
+  }
 }
-#logo img {
-  display: block;
+#foward {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -32px;
+  z-index: 20;
 }
+.bg-1 {
+  background-image: url(../../dist/images/background/hintergrund1.jpg);
+}
+
+/* --------------------------------
+Navigation
+-------------------------------- */
 #home {
   margin: 0 auto;
   text-align: center;
   position: static;
-  padding: 0;
+  padding-top: 6px;
   img {
     display: block;
   }
 }
 
+/* --------------------------------
+Content
+-------------------------------- */
+main .cd-section {
+  &.gridelements_pi1-element {
+    padding: 0;
+    overflow: hidden;
+
+    .cd-contsdfaainer {
+      width: 45%;
+      max-width: 384px;
+      float: right;
+    }
+    .csc-textpic-imagecolumn {
+      margin: 0;
+      width: 100%;
+    }
+    .csc-textpic {
+      .csc-textpic-imagewrap .csc-textpic-image {
+        margin: 0;
+        width: 100%;
+      }
+      .csc-textpic-imagewrap {
+        width: 100%;
+      }
+
+    }
+  }
+  .cd-two-columns-left,
+  .cd-two-columns-right {
+    width: 50%;
+    float: right;
+  }
+  .cd-two-columns-left {
+    max-width: 420px;
+    > .cd-container {
+      width: 100%;
+    }
+    h1 {
+      background-position: left bottom;
+      padding-top: 85px;
+      text-align: left;
+
+    }
+    .bodytext {
+      color: $white;
+      text-align: left;
+      padding-right: 14px;
+    }
+  }
+
+  .cd-two-columns-right img {
+    width: 100%;
+  }
+}
+
+
+/* --------------------------------
+Responsive
+-------------------------------- */
 @media only screen and (min-width: 768px) { }
 @media only screen and (min-width: 1170px) {
   #home.is-hidden,
@@ -57,7 +117,7 @@ Logo
   #home.is-hidden.slide-in,
   #logo.is-hidden.slide-in {
     /* slide in when the secondary navigation gets fixed */
-    left: 25%;
+    left: 24%;
     opacity: 1;
     z-index: 3;
   }

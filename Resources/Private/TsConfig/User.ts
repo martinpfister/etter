@@ -25,6 +25,7 @@ options {
     clearCache {
         pages = 1
         all = 1
+        system = 1
     }
 }
 

@@ -61,7 +61,7 @@ TCEFORM.tt_content {
 
     # Only allow headers 2, 3, and 4
     header_layout {
-        keepItems = 2,3,4, 100
+        keepItems = 1,2,100
         altLabels {
             1 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.header_layout.1
             2 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.header_layout.2
@@ -71,9 +71,13 @@ TCEFORM.tt_content {
     }
 
     # Content element layouts
-    layout.disabled = 0
-    layout.keepItems = 0,1
-    layout.altLabels.1 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.examplelayout
+    #layout.disabled = 0
+    #layout.keepItems = 0,1,2,3,4
+    layout.altLabels.1 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.lightblue
+    layout.altLabels.2 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.darkblue
+    layout.altLabels.3 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.brown
+    layout.addItems.4 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.logopattern
+    layout.addItems.5 = LLL:EXT:###PACKAGE_KEY###/Resources/Private/Language/Backend.xlf:tt_content.layout.referenzen
 
     # Frames
     section_frame {

@@ -4,4 +4,4 @@
 # Overwrite values set in dev setup. Use for development
 # on a local machine.
 # *******************************************************************
-page.config.admPanel = 1
+page.config.admPanel = 0
