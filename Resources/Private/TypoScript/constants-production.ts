@@ -9,12 +9,12 @@
 #    Company constants
 # **********************************************************
 company {
-    name = Muster AG
-    street = Musterstrasse 44
-    pobox =
-    city = 9999 Musterhausen
-    phone = 099 999 99 99
-    email = muster@musterag.com
+    name   = Etter Baumanagement GmbH
+    street = Fräschelsgasse 47
+    pobox  =
+    city   = 3210 Kerzers
+    phone  = +41 78 898 90 12
+    email  = janik@etter-bau.ch
 }
 
 
@@ -23,7 +23,7 @@ company {
 # **********************************************************
 site {
 
-    url = http://www.site.com
+    url = http://www.etter-bau.ch
 
     enableRealURL = 1
     enableSocialMediaMetaTags = 1
@@ -121,4 +121,25 @@ site.icons {
     # You may specify up to 15 icons here.
     # If you need more, extend Page/page_icons.ts
 
+}
+
+formhandlerExamples.basic.ajax-submit {
+    # cat=Formhandler Examples - Basic - AJAX Submit/basic/10; type=string; label=Root path: Path where the example was saved to.
+    rootPath = typo3conf/ext/etter/Resources/Private/Extensions/formhandler/ajax-submit
+    email {
+        user {
+            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=User email sender: Email address to use as sender address for the user email.
+            sender_email =
+        }
+
+        admin {
+            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email sender: Email address to use as sender address for the admin email.
+            sender_email =
+            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email recipient: Email address of an admin to receive the contact request.
+            to_email =
+        }
+    }
+    # cat=Formhandler Examples - Basic - AJAX Submit/basic/40; type=string; label=Redirect Page: Page ID to redirect after successful form submission.
+    redirectPage =
+    includeFoundationCSS = 0
 }

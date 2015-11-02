@@ -14,6 +14,7 @@
 # **********************************************************
 #<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/news/setup.ts">
 #<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/indexed_search/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/formhandler/ajax-submit/ts/ts_setup.txt">
 
 # **********************************************************
 # Load typoscript template objects

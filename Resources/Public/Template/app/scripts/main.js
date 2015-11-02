@@ -89,6 +89,13 @@ jQuery(document).ready(function($) {
         }, 700);
     });
 
+    $('#toTop').on('click', function(event) {
+        event.preventDefault();
+        $('body,html').animate({
+            'scrollTop': $('main').offset().top
+        }, 700);
+    });
+
     $('a.internal-link').on('click', function(event) {
         event.preventDefault();
         $('body,html').animate({
@@ -100,4 +107,143 @@ jQuery(document).ready(function($) {
     $('.cd-primary-nav').on('click', function(event) {
         if ($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
     });
+});
+
+
+
+jQuery(function() {
+
+    function submitButtonClick(el) {
+        var container = el.closest(".Tx-Formhandler");
+        var form = el.closest("FORM");
+        el.attr("disabled", "disabled");
+
+        var requestURL = "/index.php?&id=2&L=0&randomID=e4469484725f4b36d6a90f7c37cfc68a&field=&uploadedFileName=&eID=formhandler-ajaxsubmit&uid=11";
+        var postData = form.serialize() + "&" + el.attr("name") + "=submit";
+        container.find(".loading_ajax-submit").show();
+        jQuery.ajax({
+            type: "post",
+            url: requestURL,
+            data: postData,
+            dataType: "json",
+            success: function(data, textStatus) {
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                } else {
+                    form.closest(".Tx-Formhandler").replaceWith(data.form);
+                    jQuery(".Tx-Formhandler INPUT[type='submit']").on("click", function(e) {
+                        e.preventDefault();
+                        submitButtonClick(jQuery(this));
+                    });
+                    jQuery(".Tx-Formhandler FORM").on("submit", function(e) {
+                        e.preventDefault();
+                        return false;
+                    });
+                    attachValidationEvents();
+
+                }
+            }
+        });
+        return false;
+    }
+
+    jQuery(".Tx-Formhandler FORM").on("submit", function(e) {
+        e.preventDefault();
+        return false;
+    });
+    jQuery(".Tx-Formhandler INPUT[type='submit']").on("click", function(e) {
+        e.preventDefault();
+        submitButtonClick(jQuery(this));
+    });
+});
+
+function attachValidationEvents() {
+    jQuery(".Tx-Formhandler FORM *[name='contact[name]']").blur(function() {
+        var field = jQuery(this);
+        var fieldVal = encodeURIComponent(field.val());
+        if(field.attr("type") == "radio" || field.attr("type") == "checkbox") {
+            if (field.attr("checked") == "") {
+                fieldVal = "";
+            }
+        }
+        var loading = jQuery(".Tx-Formhandler FORM #loading_name");
+        var result = jQuery(".Tx-Formhandler FORM #result_name");
+        loading.show();
+        result.hide();
+        var url = "/index.php?&id=2&L=0&randomID=e4469484725f4b36d6a90f7c37cfc68a&field=name&uploadedFileName=&eID=formhandler&value=";
+
+        url = url.replace("value=", "value=" + fieldVal);
+        result.load(url, function() {
+            loading.hide();
+            result.show();
+            isFieldValid = false;
+            if(result.find("SPAN.error").length > 0) {
+                result.data("isValid", false);
+            } else {
+                isFieldValid = true;
+                result.data("isValid", true);
+            }
+
+        });
+    });
+    jQuery(".Tx-Formhandler FORM *[name='contact[email]']").blur(function() {
+        var field = jQuery(this);
+        var fieldVal = encodeURIComponent(field.val());
+        if(field.attr("type") == "radio" || field.attr("type") == "checkbox") {
+            if (field.attr("checked") == "") {
+                fieldVal = "";
+            }
+        }
+        var loading = jQuery(".Tx-Formhandler FORM #loading_email");
+        var result = jQuery(".Tx-Formhandler FORM #result_email");
+        loading.show();
+        result.hide();
+        var url = "/index.php?&id=2&L=0&randomID=e4469484725f4b36d6a90f7c37cfc68a&field=email&uploadedFileName=&eID=formhandler&value=";
+
+        url = url.replace("value=", "value=" + fieldVal);
+        result.load(url, function() {
+            loading.hide();
+            result.show();
+            isFieldValid = false;
+            if(result.find("SPAN.error").length > 0) {
+                result.data("isValid", false);
+            } else {
+                isFieldValid = true;
+                result.data("isValid", true);
+            }
+
+        });
+    });
+    jQuery(".Tx-Formhandler FORM *[name='contact[message]']").blur(function() {
+        var field = jQuery(this);
+        var fieldVal = encodeURIComponent(field.val());
+        if(field.attr("type") == "radio" || field.attr("type") == "checkbox") {
+            if (field.attr("checked") == "") {
+                fieldVal = "";
+            }
+        }
+        var loading = jQuery(".Tx-Formhandler FORM #loading_message");
+        var result = jQuery(".Tx-Formhandler FORM #result_message");
+        loading.show();
+        result.hide();
+        var url = "/index.php?&id=2&L=0&randomID=e4469484725f4b36d6a90f7c37cfc68a&field=message&uploadedFileName=&eID=formhandler&value=";
+
+        url = url.replace("value=", "value=" + fieldVal);
+        result.load(url, function() {
+            loading.hide();
+            result.show();
+            isFieldValid = false;
+            if(result.find("SPAN.error").length > 0) {
+                result.data("isValid", false);
+            } else {
+                isFieldValid = true;
+                result.data("isValid", true);
+            }
+
+        });
+    });
+
+}
+jQuery(function() {
+    attachValidationEvents();
 });

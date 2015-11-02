@@ -75,6 +75,29 @@ main .cd-section {
     float: right;
   }
   .cd-two-columns-left {
+    &.contact {
+      max-width: 364px;
+      background:rgba(255,255,255, 0.5);
+      border: 2px solid $white;
+      padding: 20px 15px;
+      margin-right: 20px;
+      line-height: 1;
+      margin-top: 66px;
+      font-weight: 600;
+      p {
+        color: $darkblue;
+        margin-bottom: 10px;
+        line-height: 1;
+      }
+      b {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #09C;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
     max-width: 420px;
     > .cd-container {
       width: 100%;

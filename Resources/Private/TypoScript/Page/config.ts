@@ -43,12 +43,8 @@ config {
     sendCacheHeaders = 1
 
     headerComment (
-        Stämpfli AG // www.staempfli.com
-
-Package version: {$plugin.templatebootstrap.packageVersion}
-Bootstrap package version: {$plugin.templatebootstrap.bootstrapPackageVersion}
+        Martin Pfister - www.martinpfister.info
     )
-
 
     #HTML tag
     htmlTag_stdWrap {
