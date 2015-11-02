@@ -1,26 +1,84 @@
-function updateSecondaryNavigation() {
-    var contentSections = $('.cd-section'),
-        secondaryNav    = $('.cd-secondary-nav');
-    console.log('up');
-    contentSections.each(function() {
-        var actual = $(this),
-            actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
-            actualAnchor = secondaryNav.find('a[href="#' + actual.attr('id') + '"]');
+var mpSite = {
+    updateSecondaryNavigation: function() {
+        var contentSections = $('.cd-section'),
+            secondaryNav    = $('.cd-secondary-nav');
 
-        console.log(actualAnchor);
-        console.log(actualHeight);
-        console.log(actual);
+        contentSections.each(function() {
+            var actual = $(this),
+                actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', '')),
+                actualAnchor = secondaryNav.find('a[href="#' + actual.attr('id') + '"]');
 
-        if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) &&
-            (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
-            actualAnchor.addClass('active');
-        } else {
-            actualAnchor.removeClass('active');
-        }
-    });
+            console.log(actualAnchor);
+            console.log(actualHeight);
+            console.log(actual);
+
+            if ((actual.offset().top - secondaryNav.height() <= $(window).scrollTop()) &&
+                (actual.offset().top + actualHeight - secondaryNav.height() > $(window).scrollTop())) {
+                actualAnchor.addClass('active');
+            } else {
+                actualAnchor.removeClass('active');
+            }
+        });
+    }
+}
+
+var mpReferenzen = {
+
+    collection: null,
+
+    checkResult: function(response) {
+    },
+    printResult: function(result) {
+
+    },
+    makeRequest: function (elem) {
+        var staticUrl = "http://etter-bau.local/index.php?id=2",
+            Id = parseInt(elem.find('figure').attr('data-referenz'));
+
+        $.ajax({
+            url: staticUrl,
+            type: 'POST',
+            data: { 'tx_mpreferenzen_gallery[referenz]': Id,
+                'tx_mpreferenzen_gallery[action]': 'show',
+                'tx_mpreferenzen_gallery[controller]': 'Referenz',
+                'type':'999'
+                    },
+            beforeSend: function() {
+                $('body,html').animate({
+                    'scrollTop': $('#c2').offset().top
+                }, 700);
+            },
+            success: function (response) {
+                $('#single_reference').html(response);
+                $('#close-referenz').on('click', function(event) {
+                    event.preventDefault();
+                    $('#single_reference').html("");
+                    $('body,html').animate({
+                        'scrollTop': $('#c2').offset().top
+                    }, 700);
+                });
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.log(thrownError);
+            }
+        });
+    },
+    init: function() {
+        mpReferenzen.collection = $(".tx-mp-referenzen > a");
+
+        mpReferenzen.collection.on('click', function(event) {
+            event.preventDefault();
+            mpReferenzen.makeRequest($(this));
+        });
+    }
 }
 
 jQuery(document).ready(function($) {
+    //Referenzen
+    mpReferenzen.init();
+
+    //Site
     var secondaryNav            = $('.cd-secondary-nav'),
         secondaryNavTopPosition = secondaryNav.offset().top,
         taglineOffesetTop       = $('#cd-intro').height() + parseInt($('#logo').css('paddingTop').replace('px', '')),
