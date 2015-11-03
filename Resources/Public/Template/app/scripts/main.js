@@ -31,9 +31,15 @@ var mpReferenzen = {
     printResult: function(result) {
 
     },
+    getBaseUrl: function () {
+      if (typeof location.origin === 'undefined') {
+        return location.origin = location.protocol + '//' + location.host;
+      }
+      return location.origin;
+    },
     makeRequest: function (elem) {
-        var staticUrl = "http://etter-bau.local/index.php?id=2",
-            Id = parseInt(elem.find('figure').attr('data-referenz'));
+        var staticUrl = mpReferenzen.getBaseUrl() + "/index.php?id=2",
+            Id        = parseInt(elem.find('figure').attr('data-referenz'));
 
         $.ajax({
             url: staticUrl,
@@ -42,7 +48,7 @@ var mpReferenzen = {
                 'tx_mpreferenzen_gallery[action]': 'show',
                 'tx_mpreferenzen_gallery[controller]': 'Referenz',
                 'type':'999'
-                    },
+            },
             beforeSend: function() {
                 $('body,html').animate({
                     'scrollTop': $('#c2').offset().top
