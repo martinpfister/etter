@@ -40,9 +40,11 @@
   -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
   -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
   transition: transform 0.3s, visibility 0s 0s;
+  z-index: 100;
 }
 .cd-secondary-nav li a {
   display: block;
+  padding: 7px;
   border-bottom: 1px solid #092645;
   color: #f0eee1;
 }

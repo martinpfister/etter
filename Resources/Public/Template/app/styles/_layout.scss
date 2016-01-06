@@ -124,7 +124,46 @@ main .cd-section {
 /* --------------------------------
 Responsive
 -------------------------------- */
-@media only screen and (min-width: 768px) { }
+@media only screen and (max-width: 1170px) {
+  main .cd-section {
+    .cd-two-columns-left,
+    .cd-two-columns-right {
+      width: 100%;
+      float: none;
+      max-width: unset;
+      h1 {
+        background-position: center bottom;
+        padding-top: 85px;
+        text-align: center;
+      }
+      .cd-container {
+        width: 90%;
+        padding-bottom: 75px;
+      }
+      &.contact {
+        margin: 0 auto;
+        max-width: 502px;
+        .cd-container {
+          padding-bottom: 5px;
+        }
+      }
+      .Tx-Formhandler {
+        text-align: center;
+        input {
+          width: 100%;
+          margin-bottom: 1px;
+        }
+      }
+      .bodytext {
+        text-align: center;
+      }
+    }
+  }
+  #home {
+    display: none;
+  }
+
+}
 @media only screen and (min-width: 1170px) {
   #home.is-hidden,
   #logo.is-hidden {
