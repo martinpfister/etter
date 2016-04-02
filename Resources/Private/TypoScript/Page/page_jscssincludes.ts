@@ -10,6 +10,7 @@ page {
 
     includeJSlibs {
         modernizr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor/modernizr.js
+        venodr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor.js
     }
 
     includeJSFooterlibs {
@@ -46,7 +47,6 @@ page {
 
     # JS footer
     includeJSFooter {
-        venodr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor.js
         main   = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/main.js
     }
 

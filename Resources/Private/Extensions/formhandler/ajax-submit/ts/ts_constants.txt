@@ -8,17 +8,17 @@ formhandlerExamples.basic.ajax-submit {
 		user {
 
 			# cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=User email sender: Email address to use as sender address for the user email.
-			sender_email = 
+			sender_email = email
 
 		}
 
 		admin {
 
 			# cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email sender: Email address to use as sender address for the admin email.
-			sender_email = 
+			sender_email = no-reply@etter-bau.ch
 
 			# cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email recipient: Email address of an admin to receive the contact request.
-			to_email = 
+			to_email = martin.pfister@posteo.de
 		}
 	}
 
