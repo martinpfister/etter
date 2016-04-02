@@ -8,15 +8,23 @@ Start
   background-size: cover;
   z-index: 2;
 }
+
 #logo {
+  position:absolute;
+  left: 50%;
+  margin-left: -125px;
+  top: 50%;
+  margin-top: -56.5px;
   width: 250px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 250px;
+  height: 113px;
+
   img {
     display: block;
   }
 }
+
+
+
 #foward {
   position: absolute;
   bottom: 50px;
@@ -25,7 +33,7 @@ Start
   z-index: 20;
 }
 .bg-1 {
-  background-image: url(../../dist/images/background/hintergrund1.jpg);
+  background-image: url(../../app/images/background/hintergrund1.jpg);
 }
 
 /* --------------------------------
