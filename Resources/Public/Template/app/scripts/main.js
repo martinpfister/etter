@@ -47,6 +47,7 @@ var mpReferenzen =
         $.ajax({
             url: staticUrl,
             type: 'POST',
+            async: true,
             data: { 'tx_mpreferenzen_gallery[referenz]': Id,
                 'tx_mpreferenzen_gallery[action]': 'show',
                 'tx_mpreferenzen_gallery[controller]': 'Referenz',
@@ -72,8 +73,8 @@ var mpReferenzen =
                 });
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                console.log(xhr.status);
-                console.log(thrownError);
+                //console.log(xhr.status);
+                //console.log(thrownError);
             }
         });
     },
