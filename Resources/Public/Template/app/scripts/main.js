@@ -41,11 +41,19 @@ var mpReferenzen =
       return location.origin;
     },
     makeRequest: function (elem) {
-        var staticUrl = mpReferenzen.getBaseUrl();// + "/index.php?id=1",
-            Id        = parseInt(elem.find('figure').attr('data-referenz'));
+        var Id        = parseInt(elem.find('figure').attr('data-referenz'));
+        var staticUrl = mpReferenzen.getBaseUrl(); // + "/index.php?id=1",
+        var params    = "?type=999&tx_mpreferenzen_gallery[referenz]=" +
+                        Id +
+                        "&tx_mpreferenzen_gallery[action]=show" +
+                        "&tx_mpreferenzen_gallery[controller]=Referenz";
+
+        console.log(staticUrl);
+        console.log(params);
+
         //console.log(staticUrl);
         $.ajax({
-            url: staticUrl,
+            url: staticUrl + params,
             type: 'POST',
             async: true,
             data: { 'tx_mpreferenzen_gallery[referenz]': Id,
@@ -73,8 +81,8 @@ var mpReferenzen =
                 });
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                //console.log(xhr.status);
-                //console.log(thrownError);
+                console.log(xhr.status);
+                console.log(thrownError);
             }
         });
     },
