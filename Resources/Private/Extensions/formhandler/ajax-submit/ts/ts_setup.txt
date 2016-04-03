@@ -42,7 +42,7 @@ plugin.Tx_Formhandler.settings.predef.formhandler-basic-ajax-submit {
 	ajax {
 		class = AjaxHandler_JQuery
 		config {
-			ajaxSubmit = 0
+			ajaxSubmit = 1
 		}
 	}
 
@@ -50,7 +50,7 @@ plugin.Tx_Formhandler.settings.predef.formhandler-basic-ajax-submit {
 	finishers {
 
 		# Finisher_Mail sends emails to an admin and/or the user.
-		1.class = Finisher_Mail
+		1.class = Finisher\Mail
 		1.config {
 			checkBinaryCrLf = message
 			admin {
@@ -62,6 +62,12 @@ plugin.Tx_Formhandler.settings.predef.formhandler-basic-ajax-submit {
 				subject.data = LLL:{$formhandlerExamples.basic.ajax-submit.rootPath}/lang/lang.xml:email_admin_subject
 			}
 		}
+
+        1.class = Finisher\SubmittedOK
+        1.config {
+            returns = 1
+        }
+
 
 		# Finisher_Redirect will redirect the user to another page after the form was submitted successfully.
 		#5.class = Finisher_Redirect
