@@ -48,13 +48,12 @@ var mpReferenzen =
                         "&tx_mpreferenzen_gallery[action]=show" +
                         "&tx_mpreferenzen_gallery[controller]=Referenz";
 
-        console.log(staticUrl);
-        console.log(params);
+        console.log(staticUrl + params);
 
         //console.log(staticUrl);
         $.ajax({
             url: staticUrl + params,
-            type: 'POST',
+            type: 'GET',
             async: true,
             data: { 'tx_mpreferenzen_gallery[referenz]': Id,
                 'tx_mpreferenzen_gallery[action]': 'show',
