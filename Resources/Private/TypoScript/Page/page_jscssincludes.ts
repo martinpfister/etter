@@ -11,6 +11,7 @@ page {
     includeJSlibs {
         modernizr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor/modernizr.js
         venodr = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/vendor.js
+        slider = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/dist/scripts/bxslider/bower_components/fafnur-bxslider/dist/jquery.bxslider.min.js
     }
 
     includeJSFooterlibs {
@@ -40,7 +41,7 @@ page {
         #slickslider = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/jquery/slick/slick.js
 
         # Click delay removal for mobile browsers
-        fastclick = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/fastclick/fastclick.js
+        #fastclick = EXT:{$plugin.templatebootstrap.packageKey}/Resources/Public/Template/js/fastclick/fastclick.js
 
     }
 

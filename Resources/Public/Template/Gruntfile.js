@@ -290,15 +290,22 @@ module.exports = function (grunt) {
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
-        files: [{
+        files: [
+            {
+                expand: true,
+                flatten: false,
+                src: ['bower_components/fafnur-bxslider/dist/**'],
+                dest:'<%= config.dist %>/scripts/bxslider/'
+            },
+            {
                 expand: true,
                 src: ['bower_components/font-awesome/fonts/**'],
                 dest: '<%= config.dist %>/fonts',
                 filter: 'isFile'
-            }, {
-                expand: true,
-                src: ['bower_components/font-awesome/fonts/**'],
-                dest:'<%= config.app %>/fonts'
+            },{
+              expand: true,
+              src: ['bower_components/font-awesome/fonts/**'],
+              dest:'<%= config.app %>/fonts'
             },{
                 expand: true,
                 src: ['bower_components/font-awesome/css/font-awesome.min.css'],
