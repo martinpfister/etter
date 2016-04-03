@@ -41,7 +41,7 @@ var mpReferenzen =
       return location.origin;
     },
     makeRequest: function (elem) {
-        var staticUrl = mpReferenzen.getBaseUrl() + "/index.php?id=1",
+        var staticUrl = mpReferenzen.getBaseUrl();// + "/index.php?id=1",
             Id        = parseInt(elem.find('figure').attr('data-referenz'));
         //console.log(staticUrl);
         $.ajax({
