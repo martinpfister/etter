@@ -2,7 +2,7 @@
 #    Extension constants
 # **********************************************************
 #<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/news/constants.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/formhandler/ajax-submit/ts/ts_setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/formhandler/ajax-submit/ts/ts_constants.txt">
 
 # **********************************************************
 #    Company constants

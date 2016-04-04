@@ -26,6 +26,6 @@ formhandlerExamples.basic.ajax-submit {
 	redirectPage = 
 
 	
-	includeFoundationCSS = 1
+	includeFoundationCSS = 0
 	
 }
