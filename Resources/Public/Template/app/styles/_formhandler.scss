@@ -12,6 +12,7 @@
     color: #000;
     font-style: italic;
     margin-right: 10px;
+    max-width: 502px;
   }
   textarea {
     width: 502px;
@@ -23,9 +24,6 @@
       cursor: pointer;
       color: #fff;
     }
-  }
-  fieldset {
-    margin-bottom: 10px;
   }
 }
 
