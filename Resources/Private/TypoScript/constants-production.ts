@@ -2,8 +2,7 @@
 #    Extension constants
 # **********************************************************
 #<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/news/constants.ts">
-#<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/indexed_search/constants.ts">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:./../Extensions/formhandler/ajax-submit/ts/ts_setup.txt">
 
 # **********************************************************
 #    Company constants
@@ -121,25 +120,4 @@ site.icons {
     # You may specify up to 15 icons here.
     # If you need more, extend Page/page_icons.ts
 
-}
-
-formhandlerExamples.basic.ajax-submit {
-    # cat=Formhandler Examples - Basic - AJAX Submit/basic/10; type=string; label=Root path: Path where the example was saved to.
-    rootPath = typo3conf/ext/etter/Resources/Private/Extensions/formhandler/ajax-submit
-    email {
-        user {
-            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=User email sender: Email address to use as sender address for the user email.
-            sender_email =
-        }
-
-        admin {
-            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email sender: Email address to use as sender address for the admin email.
-            sender_email =
-            # cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=Admin email recipient: Email address of an admin to receive the contact request.
-            to_email =
-        }
-    }
-    # cat=Formhandler Examples - Basic - AJAX Submit/basic/40; type=string; label=Redirect Page: Page ID to redirect after successful form submission.
-    redirectPage =
-    includeFoundationCSS = 0
 }
