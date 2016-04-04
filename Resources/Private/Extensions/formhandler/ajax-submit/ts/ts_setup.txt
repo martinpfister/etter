@@ -63,8 +63,8 @@ plugin.Tx_Formhandler.settings.predef.formhandler-basic-ajax-submit {
 			}
 		}
 
-        1.class = Finisher\SubmittedOK
-        1.config {
+        2.class = Finisher\SubmittedOK
+        2.config {
             returns = 1
         }
 

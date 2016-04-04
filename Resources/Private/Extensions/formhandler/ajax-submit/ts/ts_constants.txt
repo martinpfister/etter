@@ -9,7 +9,7 @@ formhandlerExamples.basic.ajax-submit {
 
 			# cat=Formhandler Examples - Basic - AJAX Submit/basic/20; type=string; label=User email sender: Email address to use as sender address for the user email.
 			sender_email = email
-
+			
 		}
 
 		admin {
