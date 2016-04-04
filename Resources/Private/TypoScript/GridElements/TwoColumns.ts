@@ -14,7 +14,7 @@ tt_content.gridelements_pi1.20.10.setup {
             10 = TEXT
             10 =< tt_content
             10.stdWrap.innerWrap.cObject.default {
-                20.10.5.value = element cd-two-columns-left
+                20.10.5.value = element cd-two-columns-left cd-section
                 10.cObject.default.value=<div id="c{field:uid}"
                 30.cObject.default.value=>|</div>
             }
@@ -25,7 +25,7 @@ tt_content.gridelements_pi1.20.10.setup {
             10 = TEXT
             10 =< tt_content
             10.stdWrap.innerWrap.cObject.default {
-                20.10.5.value = element cd-two-columns-right
+                20.10.5.value = element cd-two-columns-right cd-section
                 10.cObject.default.value=<div id="c{field:uid}"
                 30.cObject.default.value=>|</div>
             }
