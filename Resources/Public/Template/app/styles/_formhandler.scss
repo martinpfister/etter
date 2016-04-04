@@ -25,6 +25,17 @@
       color: #fff;
     }
   }
+  fieldset {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  #contact-form {
+    fieldset {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 
