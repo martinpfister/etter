@@ -8,7 +8,9 @@ main .cd-section {
   &.has-top-margin {
     padding-top: 155px;
   }
-
+  .cd-section {
+    padding-bottom: 0;
+  }
   h1 {
     color: $darkblue;
     text-transform: uppercase;
